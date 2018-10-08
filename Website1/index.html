@@ -1,0 +1,99 @@
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title> Drones </title> 
+		<script>
+			function banner(){ 
+			var text = confirm("Go Home?"); 
+			return text; 
+			}
+
+
+
+
+			function answer(){ 
+				var radio = document.getElementsByName("trivia"); 
+				var selection = false; 
+				var message = "";
+				
+
+							for( var i = 0; i < radio.length; i++) { 
+				if(radio[i].value == "1920" && radio[i].checked == true) { 
+					selection = true; 
+				} //end if statement 
+			} //end for loop
+
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>Way to go!</p></b>"; 
+			} else { 
+				message = message + "<b><p style='color:red'>Nope. Fool.</p></b>";
+			}
+				document.getElementById("response").innerHTML = message;
+
+		} //end function answer
+
+
+
+
+		</script>
+	</head> 
+	<body>
+	<a href="index.html" onclick="return banner()"> 
+		<header id="header">
+			<center>
+				<h1>
+					Drones
+				</h1>
+			</center>
+		</header>
+	</a>
+		<nav>
+			<ul id="navmenu">
+				<li class="navitem"><a href="index.html">Home</a></li>
+				<li class="navitem"><a href="games.html">Games</a></li>
+				<li class="navitem"><a href="mystery.html">Mystery</a></li>
+			</ul>
+		</nav>
+		<div id="rightSide">
+			<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/pexels-photo-drone-1512930874.jpeg" style="width:250px;height:200px;"/>
+			<img src="https://mymodernmet.com/wp/wp-content/uploads/2017/06/aerial-photography-dronestagram-1.jpg" style="width:250px;height:144.33;"/>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/cpmKvBGey18" frameborder="0" 	allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<div id="leftSide">
+			<p>
+			I think that <b><u><i>drones</i></u></b> or <b><u><i>quadcopters</i></u></b> are awesome. They can go to places that humans just can't. They take amazing pictures that a human would also not be capable of taking. Drones can be very expensive and can cost thousands of dollars. A good photography drone could cost as much as <span class="tth">$2,000!</span>
+		</p>
+		<div class="wrap-list">
+			<ul>
+				<li class="list">I really like drones.</li>
+				<li class="list">I want a drone but just can't afford one that is worth the price.</li>
+				<li class="list">I hope I will get a drone eventually.</li>
+			</ul>
+		</div>
+
+		<audio id= "audio" width="400" height="220" controls autoplay>
+		<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+		Your browser does not support HTML 5 audio.
+		</audio>
+
+		<div class="wrap-trivia">
+			<h2><u> Drone Trivia Question:</u></h2>
+			<p class="paragraph">When was the first drone invented?</p>
+			<form>
+				<input type="radio" name ="trivia" value="1930">1930<br>
+				<input type="radio" name ="trivia" value="1940">1940<br>
+				<input type="radio" name ="trivia" value="1920">1920<br>
+				<input type="radio" name ="trivia" value="1910">1910<br>
+				<input type="button" value="Submit" onclick="answer()">
+				<div id="response"></div>
+			</form>
+		</div>	
+		<hr>
+		<center> Drones - <a href="http://simplycodingcourses.com">SimplyCoding</a></center>
+		<footer>
+			<center>
+				Created By: Collin Wright
+			</center>
+		</footer>
+	</body> 
+</html>
